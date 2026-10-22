@@ -185,10 +185,12 @@
 </footer>
 
 <script>
-  // Sign-ups are stored by MailerLite (form "AutoAI waitlist"). This address comes from the
-  // embedded form's public code; it is not a secret. Set it to '' to switch sending off.
+  // Sign-ups are stored by MailerLite (form "AutoAI waitlist"). Public address, not a secret.
+  // Use the assets.mailerlite.com address: the dashboard.mailerlite.com one in MailerLite's embed
+  // code redirects, and browsers drop the form data when following that redirect.
+  // Set it to '' to switch sending off.
   const MAILERLITE_SUBSCRIBE_URL =
-    'https://dashboard.mailerlite.com/jsonp/2733266/forms/202026689888257390/subscribe';
+    'https://assets.mailerlite.com/jsonp/2733266/forms/202026689888257390/subscribe';
 
   const form = document.getElementById('waitlist');
   const status = document.getElementById('status');
@@ -224,11 +226,16 @@
     const button = form.querySelector('button');
     button.disabled = true;
     try {
-      await fetch(MAILERLITE_SUBSCRIBE_URL, {
-        method: 'POST', body: data, mode: 'no-cors'
-      });
-      form.reset();
-      show('ok', "Thanks, you're on the list! Please check your email to confirm.");
+      const response = await fetch(MAILERLITE_SUBSCRIBE_URL, { method: 'POST', body: data });
+      const result = await response.json().catch(() => ({}));
+      if (response.ok && result.success) {
+        form.reset();
+        show('ok', "Thanks, you're on the list! If you get an email asking you to confirm, please click the link.");
+      } else {
+        const emailError = result.errors && result.errors.fields && result.errors.fields.email;
+        show('err', emailError ? 'Please check your email address and try again.'
+                               : "Sorry, that didn't go through. Please try again in a moment.");
+      }
     } catch (err) {
       show('err', "Sorry, that didn't go through. Please check your connection and try again.");
     } finally {
