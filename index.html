@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoAI UK: your car's warning lights in plain English</title>
+<meta name="description" content="Plug a £20 adapter into your car and AutoAI tells you what's wrong, whether it's safe to drive, and what to do next. Join the waiting list.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">AutoAI <span>UK</span></div>
+    <div class="hero-grid">
+      <div>
+        <span class="badge">Coming soon to iPhone and Android</span>
+        <h1>Engine light on? Know what's wrong in a minute.</h1>
+        <p class="lead">Plug a small £20 adapter into your car. AutoAI reads the fault, explains it in plain
+          English, and tells you straight away whether it's <strong>safe to drive</strong>.</p>
+        <a class="button" href="#join">Join the waiting list</a>
+        <p class="small">Free to join. We'll only email you about AutoAI's launch.</p>
+      </div>
+      <div class="phones" aria-hidden="true">
+        <div class="phone back"><img src="img/home.jpg" alt="" width="540" height="982"></div>
+        <div class="phone"><img src="img/results.jpg" alt="" width="540" height="982"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Not just a fault code</h2>
+      <p class="sub">Most scanner apps show "P0301" and leave you to search the internet. AutoAI tells you what it means for you.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="chip green">GREEN</span> <span class="chip amber">AMBER</span> <span class="chip red">RED</span>
+          <h3>Safe to drive?</h3>
+          <p>A clear green, amber or red answer for every fault, so you know whether to carry on, book a garage, or stop.</p>
+        </div>
+        <div class="card">
+          <span class="chip blue">PLAIN ENGLISH</span>
+          <h3>What it means</h3>
+          <p>"One of your engine's cylinders isn't firing properly", not jargon. With the likely causes and what to ask your garage.</p>
+        </div>
+        <div class="card">
+          <span class="chip blue">MADE FOR THE UK</span>
+          <h3>MOT, tax and costs</h3>
+          <p>MOT history and reminders from your registration, plus typical UK repair prices for your area. Coming with Premium.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">No mechanic skills needed. If your car is a petrol from 2001 or a diesel from 2004 onwards, it has the port.</p>
+      <div class="steps">
+        <div class="step">
+          <h3>Plug in the adapter</h3>
+          <p>A small Bluetooth OBD2 adapter (about £20) goes into a socket under your dashboard, usually near the steering wheel. We'll show you where.</p>
+        </div>
+        <div class="step">
+          <h3>Tap Scan</h3>
+          <p>Turn the ignition on and tap Scan. AutoAI finds the adapter by itself and remembers it for next time.</p>
+        </div>
+        <div class="step">
+          <h3>Get your answer</h3>
+          <p>In about a minute: what's wrong, how serious it is, whether it's safe to drive, and what to do next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap join-grid">
+      <div>
+        <h2>Join the waiting list</h2>
+        <p class="sub">Be first to try AutoAI when it launches. Your answers help us build the right thing, and
+          they take 30 seconds.</p>
+        <img src="img/fault.jpg" alt="AutoAI fault screen: Cylinder misfire, amber, safe to drive with care" width="540" height="982" style="max-width: 280px; border-radius: 24px; border: 1px solid var(--line)">
+      </div>
+
+      <form id="waitlist" novalidate>
+        <div>
+          <label for="email">Email address</label>
+          <input id="email" name="fields[email]" type="email" autocomplete="email" required placeholder="you@example.com">
+        </div>
+
+        <div>
+          <label for="car">Your car <span class="hint">(optional)</span></label>
+          <input id="car" name="fields[car]" type="text" autocomplete="off" placeholder="e.g. Ford Focus 2016, petrol">
+        </div>
+
+        <fieldset>
+          <legend>Do you already have an OBD2 adapter?</legend>
+          <div class="options">
+            <label><input type="radio" name="fields[has_adapter]" value="Yes"> Yes</label>
+            <label><input type="radio" name="fields[has_adapter]" value="No"> No</label>
+            <label><input type="radio" name="fields[has_adapter]" value="Not sure"> Not sure what that is</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>How would you prefer to pay for the full version?</legend>
+          <div class="options">
+            <label><input type="radio" name="fields[pay_preference]" value="Monthly"> Monthly (about £5)</label>
+            <label><input type="radio" name="fields[pay_preference]" value="Yearly"> Yearly (about £40)</label>
+            <label><input type="radio" name="fields[pay_preference]" value="Per report"> Pay per fault report</label>
+            <label><input type="radio" name="fields[pay_preference]" value="Free only"> I'd only use the free version</label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label for="heard">Where did you hear about AutoAI?</label>
+          <select id="heard" name="fields[heard_from]">
+            <option value="">Choose one</option>
+            <option>Facebook</option>
+            <option>TikTok</option>
+            <option>YouTube</option>
+            <option>Instagram</option>
+            <option>Reddit</option>
+            <option>A friend</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <label class="consent">
+          <input id="consent" type="checkbox" required>
+          <span>Yes, email me about AutoAI's launch. I can unsubscribe at any time.
+            See the <a href="privacy.html">privacy notice</a>.</span>
+        </label>
+
+        <!-- Spam trap: people never see or fill this. -->
+        <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+        <button class="button" type="submit">Join the waiting list</button>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap" style="max-width: 760px">
+      <h2>Questions</h2>
+      <details>
+        <summary>What is an OBD2 adapter, and which one should I buy?</summary>
+        <p>A small plug that lets your phone read your car's computer. Most cost £15–£35 online. Look for one that
+          says "Bluetooth" and, if you have an iPhone, "BLE" or "works with iPhone". We'll list adapters we've
+          tested when we launch.</p>
+      </details>
+      <details>
+        <summary>Will it work with my car?</summary>
+        <p>Almost certainly, if it's a petrol car from 2001 or a diesel from 2004 onwards. That's when the port
+          became standard in the UK.</p>
+      </details>
+      <details>
+        <summary>What can it read?</summary>
+        <p>Engine and emissions faults: the ones that turn on the engine warning light. Warnings like ABS, airbag
+          or tyre pressure usually need a more advanced adapter.</p>
+      </details>
+      <details>
+        <summary>Does it replace a mechanic?</summary>
+        <p>No. AutoAI gives guidance so you know how urgent a problem is and what to ask your garage. If a
+          warning light is red or flashing, or the car feels unsafe, stop when safe and get professional help.</p>
+      </details>
+      <details>
+        <summary>How much will it cost?</summary>
+        <p>There will be a free version for reading faults and checking whether it's safe to drive. The full
+          version with plain-English explanations, repair costs and the AI mechanic is planned at about £4.99 a
+          month. Prices are not final.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>AutoAI UK</strong> · made in the UK by Adrian Iwobi (Iwobi Apps)</p>
+    <p><a href="privacy.html">Privacy notice</a> · Contact: <a href="mailto:adrianiwobi@googlemail.com">adrianiwobi@googlemail.com</a></p>
+  </div>
+</footer>
+
+<script>
+  // Sign-ups are stored by MailerLite (form "AutoAI waitlist"). This address comes from the
+  // embedded form's public code; it is not a secret. Set it to '' to switch sending off.
+  const MAILERLITE_SUBSCRIBE_URL =
+    'https://dashboard.mailerlite.com/jsonp/2733266/forms/202026689888257390/subscribe';
+
+  const form = document.getElementById('waitlist');
+  const status = document.getElementById('status');
+
+  function show(kind, text) {
+    status.className = 'status ' + kind;
+    status.textContent = text;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email');
+    if (!email.value || !email.checkValidity()) {
+      show('err', 'Please enter a valid email address.');
+      email.focus();
+      return;
+    }
+    if (!document.getElementById('consent').checked) {
+      show('err', 'Please tick the box so we can email you about the launch.');
+      return;
+    }
+    if (document.getElementById('website').value) return; // A bot filled the spam trap.
+
+    if (!MAILERLITE_SUBSCRIBE_URL) {
+      show('ok', 'Preview only: the form is not connected yet, so nothing was sent.');
+      return;
+    }
+
+    const data = new FormData(form);
+    data.delete('website');
+    data.append('ml-submit', '1');
+    data.append('anticsrf', 'true');
+    const button = form.querySelector('button');
+    button.disabled = true;
+    try {
+      await fetch(MAILERLITE_SUBSCRIBE_URL, {
+        method: 'POST', body: data, mode: 'no-cors'
+      });
+      form.reset();
+      show('ok', "Thanks, you're on the list! Please check your email to confirm.");
+    } catch (err) {
+      show('err', "Sorry, that didn't go through. Please check your connection and try again.");
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
